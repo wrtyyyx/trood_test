@@ -1,0 +1,46 @@
+.projectForm {
+  margin-top: 32px;
+  box-sizing: content-box;
+  display: grid;
+  grid-template-columns: 414px 433px;
+  grid-row-gap: 20px;
+  grid-column-gap: 37px;
+  padding: 55px 77px 120px 59px;
+  background: #fff;
+  border-radius: 24px 24px 0 0  ;
+  width: fit-content;
+}
+
+.form-row {
+  display: flex;
+  gap: 10px;
+}
+
+input, select, textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 10px;
+  padding: 14px 0 14px 10px;
+}
+.form_field{
+  width: 443px;
+}
+
+textarea {
+  height: 100px;
+  resize: none;
+}
+
+.create-project-btn {
+  background: #d1d1d1;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.desc{
+  grid-column: 1 / 3;
+}
+

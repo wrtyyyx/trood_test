@@ -1,0 +1,45 @@
+.header {
+  padding-bottom: 39px;
+  &_nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &_logo {
+    font-family: Aeroport;
+    font-size: 24px;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-left: -20px;
+  }
+
+  &_right {
+    display: flex;
+    width: 229px;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+  }
+
+  &_notif {
+    display: flex;
+    gap: 24px;
+  }
+
+  &_user {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    &_logo {
+      width: 34px;
+      height: 34px;
+      background: #DBE3E1;
+      border-radius: 50%;
+    }
+    &_name{
+  color: #9CA3AF;
+    }
+  }
+}

@@ -1,0 +1,44 @@
+.menu {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  padding-left: 40px;
+}
+.log_out{
+  position: fixed;
+  content: '';
+  bottom:40px;
+}
+.menu_item {
+  width: 100%;
+  background: none;
+  border: none;
+  text-align: left;
+  padding: 12px 19px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s;
+  border-radius: 12px;
+  font-family: Aeroport;
+}
+
+.active {
+  background: #ddd;
+  color: #fff;
+
+}
+
+.log_out {
+  color: #AAB4B6;
+  font-family: Aeroport;
+  border: none;
+  background: none;
+  display: flex;
+  padding-left: 19px;
+}
