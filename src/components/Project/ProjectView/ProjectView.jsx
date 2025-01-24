@@ -9,10 +9,14 @@ import {storageKey, storageDoneKey} from "../../../constants.js";
 const ProjectView = ({projects, setProjects, doneProject ,setDoneProject}) => {
 
     useEffect(() => {
-        const storedProjects = JSON.parse(localStorage.getItem(storageKey)) || "[]";
-        const storedDoneProjects = JSON.parse(localStorage.getItem(storageDoneKey)) || "[]";
-        setProjects(storedProjects);
-        setDoneProject(storedDoneProjects)
+        const storedProjects = JSON.parse(localStorage.getItem(storageKey)) ?? [];
+        const storedDoneProjects = JSON.parse(localStorage.getItem(storageDoneKey)) ?? [];
+
+        if (!Array.isArray(storedProjects)) setProjects([]);
+        else setProjects(storedProjects);
+
+        if (!Array.isArray(storedDoneProjects)) setDoneProject([]);
+        else setDoneProject(storedDoneProjects);
     }, [setProjects, setDoneProject]);
 
     const generateId = () =>  crypto.randomUUID();

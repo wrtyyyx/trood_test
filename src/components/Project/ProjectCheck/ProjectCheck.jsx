@@ -6,12 +6,11 @@ import './ProjectCheck.scss'
 import {storageKey, storageDoneKey} from "../../../constants.js";
 import ProjectButton from "../ProjectButton/ProjectButton.jsx";
 import * as Yup from "yup";
-import {useMemo} from "react";
 
 const ProjectCheck = ({projects, setProjects, setDoneProject, doneProject}) => {
     const {id} = useParams();
     const navigate = useNavigate();
-    const project = useMemo(() => projects.find(p => p.id === id), [projects, id]);
+    const project = projects.find(project => project.id === id);
     if (!project) {
         return <h2 className="title">Project not found</h2>;
     }
