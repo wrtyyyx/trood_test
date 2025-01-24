@@ -48,6 +48,7 @@ const ProjectForm = ({ setProjects, projects }) => {
                 initialValues={initialValues}
                 validationSchema={validationSchema}
                 onSubmit={handleSubmit}
+                validateOnBlur={true}
             >
                 {() => (
                     <Form className='projectForm'>

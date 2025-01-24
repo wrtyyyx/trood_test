@@ -6,11 +6,12 @@ import './ProjectCheck.scss'
 import {storageKey, storageDoneKey} from "../../../constants.js";
 import ProjectButton from "../ProjectButton/ProjectButton.jsx";
 import * as Yup from "yup";
+import {useMemo} from "react";
 
 const ProjectCheck = ({projects, setProjects, setDoneProject, doneProject}) => {
     const {id} = useParams();
     const navigate = useNavigate();
-    const project = projects.find(project => project.id === id);
+    const project = useMemo(() => projects.find(p => p.id === id), [projects, id]);
     if (!project) {
         return <h2 className="title">Project not found</h2>;
     }
@@ -57,7 +58,9 @@ const ProjectCheck = ({projects, setProjects, setDoneProject, doneProject}) => {
                 <h2 className="title">{project.name}</h2>
                 <ProjectButton className={'project_create delete_btn'} title={'Delete project'} handler={handleDelete}/>
             </div>
-            <Formik initialValues={initialValues} onSubmit={handleSubmit} validationSchema={validationSchema}>
+            <Formik initialValues={initialValues} onSubmit={handleSubmit} validationSchema={validationSchema}
+                    validateOnBlur={true}
+            >
                 {() => (<Form className="project_edit">
                         <div className="form_input">
                             <label htmlFor="field">Field</label>

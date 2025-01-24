@@ -5,16 +5,15 @@ import './ProjectView.scss'
 import ProjectViewCard from "./ProjectViewCard.jsx";
 import userLogo from '../../../assets/images/mdi_account.svg'
 import notify from '../../../assets/images/mingcute_notification-fill.svg'
-import user from '../../../assets/images/mdi_account.svg'
 import {storageKey, storageDoneKey} from "../../../constants.js";
 const ProjectView = ({projects, setProjects, doneProject ,setDoneProject}) => {
 
     useEffect(() => {
-        const storedProjects = JSON.parse(localStorage.getItem(storageKey)) || [];
-        const storedDoneProjects = JSON.parse(localStorage.getItem(storageDoneKey)) || [];
+        const storedProjects = JSON.parse(localStorage.getItem(storageKey)) || "[]";
+        const storedDoneProjects = JSON.parse(localStorage.getItem(storageDoneKey)) || "[]";
         setProjects(storedProjects);
         setDoneProject(storedDoneProjects)
-    }, []);
+    }, [setProjects, setDoneProject]);
 
     const generateId = () =>  crypto.randomUUID();
 
@@ -37,15 +36,13 @@ const ProjectView = ({projects, setProjects, doneProject ,setDoneProject}) => {
                     ))}
                 </div>
             )}
-            {doneProject.length !== 0 ? (
+            {doneProject.length > 0 && (
                 <div className='projectDone_box'>
                     <h2 className='title'>Passed projects</h2>
                     <div className='projectView_box projectDone'>
                         {doneProject.map((done) => (
-                            <div key={generateId()} className='projectDone_card'>
-                                <div className='projectDone_card_title'>
-                                    {done.name}
-                                </div>
+                            <div key={done.id || generateId()} className='projectDone_card'>
+                                <div className='projectDone_card_title'>{done.name}</div>
                                 <div className='projectDone_card_user'>
                                     <div className='projectDone_card_user_info'>
                                         <img src={userLogo} alt=""/>
@@ -53,16 +50,14 @@ const ProjectView = ({projects, setProjects, doneProject ,setDoneProject}) => {
                                     </div>
                                     <div className='projectDone_card_user_icons'>
                                         <img src={notify} alt="" width={24} height={24}/>
-                                        <img src={user} alt=""width={24} height={24}/>
+                                        <img src={userLogo} alt="" width={24} height={24}/>
                                     </div>
                                 </div>
                             </div>
                         ))}
-
                     </div>
-
                 </div>
-            ) : ''}
+            )}
         </div>
     );
 };

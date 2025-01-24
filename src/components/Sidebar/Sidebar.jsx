@@ -1,34 +1,36 @@
-import { useState } from "react";
-import { Link } from "react-router-dom"; // Додаємо Link
+import {useState} from "react";
+import {Link} from "react-router-dom"; // Додаємо Link
 import "./Sidebar.scss";
 
 const Sidebar = () => {
-    const [active, setActive] = useState('Projects');
+    const [active, setActive] = useState('Main page');
 
-    const menuItems = ["Main page", "Projects", "Vacancies", "People", "Tests", "Settings"];
+    const menuItems = [
+        {name: 'Main page', path: '/'},
+        {name: 'Projects', path: '/projects'},
+        {name: 'Vacancies', path: '/vacancies'},
+        {name: 'People', path: '/people'},
+        {name: 'Tests', path: '/tests'},
+        {name: 'Settings', path: '/settings'},
+
+    ]
+
+
 
     return (
         <aside className="sidebar">
             <ul className="menu">
-                {menuItems.map((item) => (
-                    <li key={item}>
-                        {item === "Projects" ? (
-                            <Link to="/projects">
-                                <button
-                                    className={`menu_item ${active === item ? "active" : ""}`}
-                                    onClick={() => setActive(item)}
-                                >
-                                    {item}
-                                </button>
-                            </Link>
-                        ) : (
+                {menuItems.map(({name,path}) => (
+                    <li key={name}>
+
+                        <Link to={path}>
                             <button
-                                className={`menu_item ${active === item ? "active" : ""}`}
-                                onClick={() => setActive(item)}
+                                className={`menu_item ${active === name ? "active" : ""}`}
+                                onClick={() => setActive(name)}
                             >
-                                {item}
+                                {name}
                             </button>
-                        )}
+                        </Link>
                     </li>
                 ))}
             </ul>
