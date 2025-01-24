@@ -1,4 +1,3 @@
-import React from 'react';
 import './Header.scss'
 import mess from '../../assets/images/iconoir_message-solid.svg'
 import not from '../../assets/images/mingcute_notification-fill.svg'

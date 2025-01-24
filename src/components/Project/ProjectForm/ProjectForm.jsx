@@ -85,7 +85,7 @@ const ProjectForm = ({ setProjects, projects }) => {
                             <Field as='textarea' name='description' />
                             <ErrorMessage name='description' component='div' className='error' />
                         </div>
-                        <ProjectButton title={'Create project'} type='submit' classname={'project_create form_btn'}/>
+                        <ProjectButton title={'Create project'} type='submit' className={'project_create form_btn'}/>
                     </Form>
                 )}
             </Formik>
