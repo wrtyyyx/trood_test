@@ -9,16 +9,17 @@
 ## ⚡ Features
 
 ### 🔹 Project Management
-- **Display a list of projects:**
-    - Categorized into **active** and **completed** projects (based on deadlines).
-    - Each project displays its **title, description, and deadline**.
--  **Create a project via a form:**
-    - Fields: **title, field** (design, development, marketing), **required experience, deadline, description**.
--  **Edit a project** on a separate page.
--  **Delete a project**.
 
+- **Display a list of projects:**
+  - Categorized into **active** and **completed** projects (based on deadlines).
+  - Each project displays its **title, description, and deadline**.
+- **Create a project via a form:**
+  - Fields: **title, field** (design, development, marketing), **required experience, deadline, description**.
+- **Edit a project** on a separate page.
+- **Delete a project**.
 
 ### 🔹 Navigation
+
 - 🔗 Clicking on a **project** opens a page with **detailed information and editing options**.
 
 ---
@@ -58,19 +59,19 @@ The project includes the following commands:
 
 ## 🏗 Technologies Used
 
-| Technology | Description |
-|------------|-------------|
-| **React** | UI library |
-| **React Router DOM** | Routing for React |
-| **Formik** | Form management |
-| **Yup** | Form validation |
-| **Sass** | CSS preprocessor |
-| **Vite** | Fast development environment |
-| **ESLint** | Code quality tool |
+| Technology           | Description                  |
+| -------------------- | ---------------------------- |
+| **React**            | UI library                   |
+| **React Router DOM** | Routing for React            |
+| **Formik**           | Form management              |
+| **Yup**              | Form validation              |
+| **Sass**             | CSS preprocessor             |
+| **Vite**             | Fast development environment |
+| **ESLint**           | Code quality tool            |
 
 ---
 
-##  Contribution
+## Contribution
 
 Please follow these guidelines when contributing:
 
@@ -80,11 +81,10 @@ Please follow these guidelines when contributing:
 
 ---
 
-##  License
+## License
 
 This project is **private**.
 
 ---
 
-📌 *Developed with ❤️ for efficient project management!*
-
+📌 _Developed with ❤️ for efficient project management!_

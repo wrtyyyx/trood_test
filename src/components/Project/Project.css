@@ -1,32 +1,28 @@
 .project_container {
-    border-radius: 16px 16px 16px;
-    background: #F3F4F6;
-    width: 100%;
-    padding: 66px 61px 0;
-    min-height: 100vh;
-
+  border-radius: 16px 16px 16px;
+  background: #f3f4f6;
+  width: 100%;
+  padding: 66px 61px 0;
+  min-height: 100vh;
 }
 
-
 .title {
-    font-size: 32px;
-    font-weight: 500;
-
+  font-size: 32px;
+  font-weight: 500;
 }
 
 .project_line {
-    display: flex;
-    justify-content: space-between;
-    padding-bottom: 32px;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 32px;
 }
 
 .project_create {
-    border: none;
-    font-family: Aeroport;
-    font-size: 20px;
-    font-weight: 600;
-    padding: 10px 24px;
-    border-radius: 24px;
-    background: #D1D2D6;
+  border: none;
+  font-family: Aeroport;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 10px 24px;
+  border-radius: 24px;
+  background: #d1d2d6;
 }
-

@@ -1,3 +1,2 @@
-export const storageKey = 'project';
-export const storageDoneKey = 'doneProject'
-
+export const storageKey = "project";
+export const storageDoneKey = "doneProject";

@@ -7,7 +7,7 @@
   grid-column-gap: 37px;
   padding: 55px 77px 120px 59px;
   background: #fff;
-  border-radius: 24px 24px 0 0  ;
+  border-radius: 24px 24px 0 0;
   width: fit-content;
 }
 
@@ -16,14 +16,16 @@
   gap: 10px;
 }
 
-input, select, textarea {
+input,
+select,
+textarea {
   width: 100%;
   border: 1px solid #ccc;
   border-radius: 5px;
   margin-top: 10px;
   padding: 14px 0 14px 10px;
 }
-.form_field{
+.form_field {
   width: 443px;
 }
 
@@ -40,7 +42,6 @@ textarea {
   cursor: pointer;
   font-weight: 600;
 }
-.desc{
+.desc {
   grid-column: 1 / 3;
 }
-

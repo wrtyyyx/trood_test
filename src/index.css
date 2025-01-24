@@ -1,22 +1,22 @@
-@import url('assets/css/reset.css');
+@import url("assets/css/reset.css");
 @font-face {
-    font-family: 'Aeroport';
-    src: url('assets/fonts/Aeroport.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+  font-family: "Aeroport";
+  src: url("assets/fonts/Aeroport.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
-.container{
-    max-width: 1360px;
-    margin: 0 auto;
+.container {
+  max-width: 1360px;
+  margin: 0 auto;
 }
-body{
-    font-family: Aeroport, sans-serif;
-    padding: 40px 0;
+body {
+  font-family: Aeroport, sans-serif;
+  padding: 40px 0;
 }
 .error {
-    color: #d9534f;
-    font-size: 14px;
-    margin-top: 4px;
-    font-weight: bold;
+  color: #d9534f;
+  font-size: 14px;
+  margin-top: 4px;
+  font-weight: bold;
 }
