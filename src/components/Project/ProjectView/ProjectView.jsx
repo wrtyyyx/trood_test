@@ -14,7 +14,7 @@ const ProjectView = ({projects, setProjects, doneProject ,setDoneProject}) => {
         const storedDoneProjects = JSON.parse(localStorage.getItem(storageDoneKey)) || [];
         setProjects(storedProjects);
         setDoneProject(storedDoneProjects)
-    }, [projects, doneProject, setProjects, setDoneProject]);
+    }, []);
 
     const generateId = () =>  crypto.randomUUID();
 

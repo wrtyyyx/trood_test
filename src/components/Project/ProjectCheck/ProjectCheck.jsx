@@ -55,7 +55,7 @@ const ProjectCheck = ({projects, setProjects, setDoneProject, doneProject}) => {
         <div className='container'>
             <div className="project_line">
                 <h2 className="title">{project.name}</h2>
-                <ProjectButton classname={'project_create delete_btn'} title={'Delete project'} handler={handleDelete}/>
+                <ProjectButton className={'project_create delete_btn'} title={'Delete project'} handler={handleDelete}/>
             </div>
             <Formik initialValues={initialValues} onSubmit={handleSubmit} validationSchema={validationSchema}>
                 {() => (<Form className="project_edit">
@@ -98,7 +98,7 @@ const ProjectCheck = ({projects, setProjects, setDoneProject, doneProject}) => {
                             <ErrorMessage name='description' component='div' className='error'/>
 
                         </div>
-                        <ProjectButton type='submit' classname={'edit-project-btn'} title={'Save changes'}/>
+                        <ProjectButton type='submit' className={'edit-project-btn'} title={'Save changes'}/>
                     </Form>
                 )}
             </Formik>
