@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"; // Додаємо Link
 import "./Sidebar.scss";
 
 const Sidebar = () => {
-    const [active, setActive] = useState();
+    const [active, setActive] = useState('Projects');
 
     const menuItems = ["Main page", "Projects", "Vacancies", "People", "Tests", "Settings"];
 
