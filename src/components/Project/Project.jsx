@@ -1,5 +1,5 @@
-import {useEffect, useState} from "react";
-import {Routes, Route, useNavigate} from "react-router-dom";
+import { useState} from "react";
+import {Routes, Route} from "react-router-dom";
 import "./Project.css";
 import ProjectForm from "./ProjectForm/ProjectForm.jsx";
 import ProjectView from "./ProjectView/ProjectView.jsx";
@@ -8,10 +8,7 @@ import ProjectCheck from "./ProjectCheck/ProjectCheck.jsx";
 const Project = () => {
     const [projects, setProjects] = useState([]);
     const [doneProject, setDoneProject] = useState([])
-    const navigate = useNavigate()
-    useEffect(() => {
-        navigate("/projects");
-    }, [navigate]);
+
 
     return (
         <div className="project_container">
